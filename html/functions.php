@@ -340,6 +340,10 @@ function getFormatByMode($mode, $filter)
 			$regex = "/(\\\\|\/)(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}-[0-9]{2})(\\\\|\/)[^\\\\\/]*{$filter}\..{3}$/i";
 			$dateFormat = "Y-m-d_H-i-s";
 			break;
+		case "meteor":
+			$regex = "/(\\\\|\/)comp-UTM-(?<date>[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2})-[0-9]+{$filter}\.jpg$/i";
+			$dateFormat = "Y-n-j-G-i-s";
+			break;
 		case "begin":
 			$regex = "/(\\\\|\/)(?<date>[0-9]{14})[^\\\\\/]*{$filter}[^\\\\\/]*\..{3}$/i";
 			$dateFormat = "YmdHis";

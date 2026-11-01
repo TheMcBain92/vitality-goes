@@ -647,6 +647,9 @@ elseif($_GET['type'] == "data")
 			case "satdump_geo":
 				$regex = "/(\\\\|\/)" . $DateTime->format('Y-m-d_H-i-s') . "(\\\\|\/)[^\\\\\/]*{$config['categories'][$_GET['id']]['data'][$_GET['subid']]['filter']}\..{3}$/i";
 				break;
+			case "meteor":
+				$regex = "/(\\\\|\/)comp-UTM-" . $DateTime->format('Y-n-j-G-i-s') . "-[0-9]+{$config['categories'][$_GET['id']]['data'][$_GET['subid']]['filter']}\.jpg$/i";
+				break;
 			case "begin":
 				$regex = "/(\\\\|\/)" . $DateTime->format('YmdHis') . "[^\\\\\/]*{$config['categories'][$_GET['id']]['data'][$_GET['subid']]['filter']}[^\\\\\/]*\..{3}$/i";
 				break;
